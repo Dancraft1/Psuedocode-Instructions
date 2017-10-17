@@ -1,0 +1,47 @@
+pseudo-code for UNO:
+public variable countModifier = 1;
+start of game:
+	get number of players;
+	give each player 7 random cards;
+	put remaining cards in stack;
+	setup playerOrder;
+do
+{
+	for(whoNeedsToPlay = playerCount; whoNeedsToPlay > 0 && whoNeedsToPlay < playerCount + 1; whoNeedsToPlay -= 1)
+	{
+		player checks their cards.
+		if(they have a card with a matching color, number, or symbol)
+		{
+			topCard = the card the player drew;
+			switch(cardType)
+			{
+				case numberCard;
+					break;
+				case Skip:
+					countModifier--;
+					break;
+				case DrawTwo:
+					player who is next in whoNeedsToPlay index needs to take 2 cards from the stack;
+					break;
+				case Reverse:
+					countModifier *= -1;
+					break;
+				case Wild:					
+					topCard.color = playerInput;
+					break;
+				case wildDrawFour;
+					player who is next in whoNeedsToPlay index takes 4 cards;
+					topCard.color = playerInput;
+					break;
+			}
+		}
+		else
+			player takes card from stack;
+	 ->	current player's score = 0;
+	|	foreach(player in playerList) //i'm lazy and tired don't judge me.
+	|	{
+	 ->		current counted player's score += current checked player's score;
+		}
+		if(current player's score
+	}
+}while(no one has a score that is more than or equal tos 500)
