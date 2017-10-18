@@ -9,10 +9,18 @@ do
 {
 	for(whoNeedsToPlay = playerCount; whoNeedsToPlay > 0 && whoNeedsToPlay < playerCount + 1; whoNeedsToPlay -= 1)
 	{
-		player checks their cards.
-		if(they have a card with a matching color, number, or symbol)
+		foreach(card in player's deck of cards)
 		{
-			topCard = the card the player drew;
+			if(it is of a matching color or number)
+				card's score++;
+				if(it's a symbol)
+					card's score++;
+					if(it's a wildDrawFour)
+						card's score++
+		}
+		if(they have a card with a score of more than zero)
+		{
+			topCard = card with highest score;
 			switch(cardType)
 			{
 				case numberCard;
